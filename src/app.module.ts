@@ -4,9 +4,9 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppService } from './app.service';
 import { join } from 'path';
-import { EnderecoModule } from './modules/endereco/endereco.module';
 import { ormConfig } from './configs/orm.config';
-import { CepModule } from './modules/cep/cep.module';
+import { EnderecoModule } from './modules/endereco/endereco.module';
+import { ServicesModule } from './services/services.module';
 
 @Module({
   imports: [
@@ -18,7 +18,7 @@ import { CepModule } from './modules/cep/cep.module';
     }),
     TypeOrmModule.forRoot(ormConfig),
     EnderecoModule,
-    CepModule,
+    ServicesModule,
   ],
   providers: [AppService],
 })
