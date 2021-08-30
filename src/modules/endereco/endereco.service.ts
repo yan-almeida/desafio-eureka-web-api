@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { EntityConflictError } from 'src/exceptions/entity-conflict-error.exception';
-import { EntityNotFoundError } from 'src/exceptions/entity-not-found-error.exception';
-import { ViaCepService } from 'src/services/via-cep.service';
+import { ViaCepService } from 'src/services/via-cep/via-cep.service';
 import { Repository } from 'typeorm';
 import { CreateEnderecoDto } from './dto/create-endereco.dto';
 import { Endereco } from './entities/endereco.entity';
@@ -26,20 +25,6 @@ export class EnderecoService {
     }
 
     return enderecoExiste;
-  }
-
-  async findAll() {
-    const enderecos = await this._enderecoRepo.find({
-      order: {
-        createdAt: 'DESC',
-      },
-    });
-
-    if (enderecos.length === 0) {
-      throw new EntityNotFoundError(Endereco);
-    }
-
-    return enderecos;
   }
 
   private async create(dto: CreateEnderecoDto) {

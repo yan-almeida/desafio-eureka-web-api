@@ -6,7 +6,7 @@ export class EnderecoParser {
   static toEnderecoDto(entity: Endereco): EnderecoDto {
     return {
       cep: entity.cep,
-      logradouro: entity.cep,
+      logradouro: entity.logradouro,
       complemento: entity.complemento,
       bairro: entity.bairro,
       localidade: entity.localidade,

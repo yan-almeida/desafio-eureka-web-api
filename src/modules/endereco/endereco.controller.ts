@@ -22,22 +22,4 @@ export class EnderecoController {
 
     return EnderecoParser.toEnderecoDto(result);
   }
-
-  @Get()
-  @ApiOkResponse({
-    description: 'Listagem de Endereços salvos',
-    type: [EnderecoDto],
-  })
-  async findAll(): Promise<EnderecoDto[]> {
-    const result = await this._enderecoService.findAll();
-
-    const enderecos: EnderecoDto[] = [];
-
-    for (const item of result) {
-      const endereco = EnderecoParser.toEnderecoDto(item);
-      enderecos.push(endereco);
-    }
-
-    return enderecos;
-  }
 }
