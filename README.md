@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Desafio [Eureka Labs](https://eurekalabs.com.br/): criação de api que consiste em armazerar endereços buscados na api externa [viaCEP](https://viacep.com.br/). Após buscar um endereço, as informações de endereço devem ser armazenadas e nas consultas subsequentes do mesmo CEP, estas informações devem ser retornadas com o que foi salvo no banco - sem que seja realizada uma consulta externa.
 
 ## Installation
 
@@ -38,13 +38,10 @@ $ npm install || yarn
 
 ```bash
 # development
-$ npm run start:debug || yarn start:debug
-
-# watch mode
-$ npm run start:dev || yarn start:dev
+$ npm run start:debug
 
 # production mode
-$ npm run start:prod || yarn start:prod
+$ npm run start:prod
 ```
 
 Lembrar de instalar o WSL2 e Docker. Vejo o vídeo: [https://www.youtube.com/watch?v=j6ioaes03oY](https://www.youtube.com/watch?v=j6ioaes03oY) 
@@ -55,14 +52,11 @@ Siga o guia rápido de instalação: [https://github.com/codeedu/wsl2-docker-qui
 
 ```bash
 # unit tests
-$ npm run test || yarn test
-
-# e2e tests
-$ npm run test:e2e || yarn test:e2e
-
-# test coverage
-$ npm run test:cov || yarn test:cov
+$ npm run test || (test:watch)
 ```
+
+![image](https://user-images.githubusercontent.com/56321281/131377343-8733ce86-3a9f-4df3-8608-8f9041711675.png)
+
 
 ## Support
 
