@@ -6,4 +6,4 @@ import { ViaCepService } from './via-cep.service';
   providers: [ViaCepService],
   exports: [ViaCepService],
 })
-export class ServicesModule {}
+export class ViaCepModule {}
